@@ -1,0 +1,58 @@
+<%- include('partials/header') -%>
+<div class="bg"></div>
+<div class="container">
+    <div class="title">
+        <h1 class="todo">TODO</h1>
+        <img class="theme" name="dark" src="../images/icon-sun.svg" alt="theme-changer">
+    </div>
+    <div>
+        <div class="type">
+            <label class="input-type">
+                <input type="checkbox" class="checkbox">
+                <div class="check"></div>
+                <form class="line" method="POST" action="/">
+                    <input type="text" name="newItem" autocomplete="off" required>
+                    <input type="submit" class="submit-type" value="+">
+                </form>
+            </label>
+        </div>
+        <div class="list">
+            <ul>
+                <% newListItem.forEach(e => { %>
+                <li>
+                    <label>
+                        <form action="/completed" method="POST">
+                            <input type="checkbox" class="checkbox">
+                            <button name="checked" value="<%=e.listItem%>" class="check" type="submit"></button>         
+                        </form>
+                        <p class="line"><%=e.listItem%></p>
+                        <form action="/delete" method="post">
+                            <button name="deleteItem" value="<%=e.id%>" type="submit"><img class="cross"
+                                    src="./images/icon-cross.svg" alt="delete-icon"></button>
+                        </form>
+                    </label>
+
+                </li>
+                <hr>
+                <% }) %>
+            </ul>
+            <div class="footer">
+                <div>
+                    <p><%=newListItem.length%> items left</p>
+                </div>
+                <div class="status">
+                    <p><a href="/all">All</a></p>
+                    <p><a class="active" href="/">Active</a></p>
+                    <p><a href="/completed">Completed</a></p>
+                </div>
+                <div>
+                    <form action="/d" method="post">
+                        <button type="submit"><p>Clear Completed</p></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<%- include('partials/footer') -%>

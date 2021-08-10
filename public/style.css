@@ -1,0 +1,442 @@
+/* TODO APP STYLING */
+* {
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+}
+
+body {
+    margin: auto;
+    background-color: hsl(235, 21%, 11%);
+    background-image: url(./images/bg-desktop-dark.jpg);
+    background-repeat: no-repeat;
+}
+
+.container {
+    margin: auto;
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 450px;
+}
+
+.type {
+    background: hsl(235, 24%, 19%);
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.input-type {
+    margin: 0;
+}
+
+input[type="text"] {
+    border: none;
+    font-size: 1rem;
+}
+
+input[type="text"]:focus {
+    outline: none;
+}
+
+.submit-type {
+    cursor: pointer;
+    margin-top: -10px;
+    font-size: 30px;
+    font-weight: 100;
+    position: absolute;
+    width: max-content !important;
+    margin-left: 20px;
+}
+
+.type input {
+    width: 300px;
+    background: none;
+    border: none;
+}
+
+.theme {
+    cursor: pointer;
+}
+
+.hello {
+    display: none;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    font-size: smaller;
+}
+
+button:focus {
+    outline: none;
+}
+
+.list {
+    border-radius: 6px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    background: hsl(235, 24%, 19%);
+}
+
+ul {
+    padding: 2px 0 0 0;
+    margin-bottom: 0;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid hsl(237, 14%, 26%);
+}
+
+li {
+    list-style: none;
+}
+
+label {
+    display: grid;
+    grid-template-columns: 1fr 12fr 1fr;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.cross {
+    display: none;
+}
+
+label:hover img.cross {
+    display: block;
+}
+
+.line {
+    display: inline;
+    align-self: center;
+    margin: 0;
+    padding-left: 18px;
+    padding-top: 3px;
+}
+
+.checkbox {
+    display: none;
+}
+
+.check {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    /* background-image: linear-gradient(to bottom hsl(192, 100%, 67%), hsl(280, 87%, 65%)); */
+    background: none;
+    border: 1px solid hsl(237, 14%, 26%);
+}
+
+.check:hover {
+    border: 1px solid hsl(192, 100%, 67%);
+}
+
+.checkbox:checked~.check {
+    background-image: url(./images/icon-check.svg), linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    width: 22px;
+    height: 22px;
+}
+
+.checkbox:checked~.line {
+    text-decoration: line-through;
+    color: hsl(233, 14%, 35%);
+}
+
+.title {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 40px;
+}
+
+.title h1 {
+    letter-spacing: 6px;
+    font-size: 3em;
+    margin: 0;
+}
+
+.title img {
+    justify-self: end;
+    align-self: center;
+}
+
+.status {
+    display: flex;
+}
+
+.status p {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footer * {
+    font-size: 12px;
+    justify-self: center;
+    color: hsl(233, 14%, 35%);
+    cursor: pointer;
+}
+
+.footer *:hover {
+    color: white;
+}
+
+.cl * {
+    color: white;
+}
+
+.light-wallpaper {
+    background-image: url('./images/bg-desktop-light.jpg');
+    background-color: white;
+}
+
+.light-list {
+    background-color: hsl(0, 0%, 98%) !important;
+    color: hsl(235, 19%, 35%) !important;
+}
+
+.light-list .footer * {
+    color: hsl(236, 9%, 61%);
+}
+
+.light-list .footer *:hover {
+    color: hsl(235, 19%, 35%) !important;
+    font-weight: 700;
+}
+
+.light-list .active {
+    color: hsl(235, 19%, 35%) !important;
+    font-weight: 700;
+}
+
+.light-list .completed {
+    color: hsl(235, 19%, 35%) !important;
+    font-weight: 700;
+}
+
+.light-type {
+    background-color: hsl(0, 0%, 98%) !important;
+}
+
+.light-line {
+    color: hsl(235, 19%, 35%) !important;
+}
+
+.light-line-completed {
+    color: hsl(234, 39%, 85%) !important;
+}
+
+.light-line input {
+    color: hsl(235, 19%, 35%) !important;
+}
+.light-line-completed input {
+    color: hsl(235, 19%, 35%) !important;
+}
+
+.light-hr {
+    border-top: 1px solid hsl(236, 9%, 61%);
+}
+
+.checkbox-completed {
+    align-self: center;
+    border-radius: 50%;
+    /* background-image: linear-gradient(to bottom hsl(192, 100%, 67%), hsl(280, 87%, 65%)); */
+    background-image: url(./images/icon-check.svg), linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    width: 22px;
+    height: 22px;
+}
+
+.line-completed {
+    padding-top: 3px;
+    padding-left: 18px;
+    text-decoration: line-through;
+    color: hsl(233, 14%, 35%);
+}
+
+.all {
+    color: white;
+}
+
+.icon {
+    align-self: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.label-completed {
+    margin: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.completed {
+    color: white;
+}
+
+.active {
+    color: white;
+}
+
+/* REGISTER FORM STYLING */
+
+/* .header {
+    width: auto;
+    margin: 60px;
+    margin-bottom: 0;
+}
+
+.form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 70vw;
+    height: 70vh;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: auto;
+    background-color: hsl(237, 14%, 26%);
+}
+
+.form-container-reg {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 70vw;
+    height: 70vh;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: auto;
+    background-color: hsl(237, 14%, 26%);
+}
+
+.info {
+    grid-row: span 2;
+    text-align: center;
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background-image: linear-gradient(rgba(54, 28, 163, .5), rgba(113, 29, 123, .5)), url(./images/2062689.jpg);
+    background-repeat: no-repeat;
+    background-size: 500px;
+}
+
+.info h1 {
+    color: black;
+    font-size: 3rem;
+}
+
+.attr {
+    font-size: 9px;
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.header-info * {
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+}
+
+.header-info h1 {
+    font-size: 4rem;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.header-info p {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.header-info h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+}
+
+.header-info-light * {
+    color: hsl(235, 21%, 11%);
+}
+
+.buttons {
+    display: grid;
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;
+}
+
+.buttons-reg {
+    display: grid;
+    height: 70vh;
+    
+}
+
+.user,
+.pass,
+.email {
+    border: none;
+    border-bottom: 1px solid hsl(234, 11%, 52%) !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+    background: none;
+    font-size: medium !important;
+    width: 200px;
+    text-align: start !important;
+    color: hsl(234, 39%, 85%);
+    padding: 3px 25px 3px 5px;
+}
+
+.user:active,
+.pass:focus,
+.email:focus {
+    outline: none;
+    border: none;
+}
+.reg{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+.reg * {
+    text-align: center;
+    margin: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.reg-btn {
+    padding: 15px 30px 15px 30px;
+    width: 150px;
+    border: 1px solid hsl(234, 11%, 52%);
+}
+
+.reg-btn:hover {
+    background-color: white;
+    color: hsl(235, 21%, 11%);
+    font-weight: 700;
+}
+
+.regg * {
+    color: hsl(235, 21%, 11%);
+}
+
+.reg-light:hover {
+    background-color: hsl(234, 11%, 52%) !important;
+    color: white !important;
+    font-weight: 700 !important;
+} */
